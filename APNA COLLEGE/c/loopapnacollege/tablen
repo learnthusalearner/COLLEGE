@@ -1,0 +1,12 @@
+#include<Stdio.h>
+int main() {
+    int n;
+    printf("enter a num : ");
+    scanf("%d",&n);
+    for(int i =n;i<=100;i=i+n){
+            printf("%d\n",i);
+        }
+}
+
+    
+    

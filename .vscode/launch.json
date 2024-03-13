@@ -1,0 +1,87 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "firstcustomclass",
+      "request": "launch",
+      "mainClass": "firstcustomclass",
+      "projectName": "New folder_dc1d58e8"
+    },
+    {
+      "type": "java",
+      "name": "strings",
+      "request": "launch",
+      "mainClass": "strings",
+      "projectName": "New folder_dc1d58e8"
+    },
+    {
+      "type": "java",
+      "name": "Stringfn",
+      "request": "launch",
+      "mainClass": "Stringfn",
+      "projectName": "New folder_dc1d58e8"
+    },
+    {
+      "type": "java",
+      "name": "stringtolower",
+      "request": "launch",
+      "mainClass": "stringtolower",
+      "projectName": "New folder_dc1d58e8"
+    },
+    {
+      "type": "java",
+      "name": "CalculatePercentage",
+      "request": "launch",
+      "mainClass": "CalculatePercentage",
+      "projectName": "New folder_dc1d58e8"
+    },
+    {
+      "type": "java",
+      "name": "area$area",
+      "request": "launch",
+      "mainClass": "area$area",
+      "projectName": "New folder_dc1d58e8"
+    },
+    {
+      "type": "java",
+      "name": "boxdemo",
+      "request": "launch",
+      "mainClass": "boxdemo",
+      "projectName": "New folder_dc1d58e8"
+    },
+    {
+      "type": "java",
+      "name": "OperatorExampleB",
+      "request": "launch",
+      "mainClass": "OperatorExampleB",
+      "projectName": "New folder_dc1d58e8"
+    },
+    {
+      "type": "java",
+      "name": "OperatorExample",
+      "request": "launch",
+      "mainClass": "OperatorExample",
+      "projectName": "New folder_dc1d58e8"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
