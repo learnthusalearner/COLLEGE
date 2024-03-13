@@ -1,0 +1,9 @@
+to push a file from vs code to git hub you need to follow the steps
+
+STEP 1>> first do whatever work you want to do
+
+STEP 2>> do "git add ." for all files and "git add (name of file)" for specific file
+
+STEP 3>> then do "GIT commit -m "any msg that you want" " will write a message that will show in github
+
+STEP 4>> last step is to do push the file in github "GIT push"
