@@ -6,4 +6,6 @@ STEP 2>> do "git add ." for all files and "git add (name of file)" for specific 
 
 STEP 3>> then do "GIT commit -m "any msg that you want" " will write a message that will show in github
 
-STEP 4>> last step is to do push the file in github "GIT push"
+STEP 4>> do "git add ." for all files and "git add (name of file)" for specific file
+
+STEP 5>> last step is to do push the file in github "GIT push"
