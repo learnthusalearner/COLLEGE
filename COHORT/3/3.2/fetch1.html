@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getAnimaldata(){
+            fetch("https://fakerapi.it/api/v1/persons")//an api which is already written
+                .then(function(response){//if the above is the api then making it a function
+                  response.json()//which will give response in json
+                    .then(function(finaldata){//if it will give function in json then the final data will be
+                        console.log(finaldata);//print the final data 
+                    })
+                })
+            }
+            //more cleaner way can also be there for it we will have to use the async function for it fetch 2
+    </script>
+    <button onclick="getAnimaldata()">get animal data</button>
+</body>
+</html>
