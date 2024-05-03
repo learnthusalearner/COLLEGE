@@ -1,4 +1,4 @@
-//postman required
+//postman required//err
 const express =require("express");
 const app=express();
 const z=require("zod");
@@ -24,3 +24,4 @@ app.post("/health-checkup",(req,res)=>{
 });
 
 app.listen(2000);
+
