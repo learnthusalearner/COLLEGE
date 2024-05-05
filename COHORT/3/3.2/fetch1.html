@@ -7,9 +7,9 @@
 </head>
 <body>
     <script>
-        function getAnimaldata(){
+        function getAnimaldata(){//promise used
             fetch("https://fakerapi.it/api/v1/persons")//an api which is already written
-                .then(function(response){//if the above is the api then making it a function
+                .then(function(response){//if the above is the api then make a fn of the response
                   response.json()//which will give response in json
                     .then(function(finaldata){//if it will give function in json then the final data will be
                         console.log(finaldata);//print the final data 

@@ -3,6 +3,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "constructoroverload",
+      "request": "launch",
+      "mainClass": "constructoroverload",
+      "projectName": "work_19f0686b"
+    },
+    {
+      "type": "java",
+      "name": "code",
+      "request": "launch",
+      "mainClass": "code",
+      "projectName": "work_19f0686b"
+    },
+    {
+      "type": "java",
+      "name": "CalculatePercentage",
+      "request": "launch",
+      "mainClass": "CalculatePercentage",
+      "projectName": "work_19f0686b"
+    },
+    {
+      "type": "java",
+      "name": "exampleextends",
+      "request": "launch",
+      "mainClass": "exampleextends",
+      "projectName": "work_19f0686b"
+    },
+    {
+      "type": "java",
+      "name": "prioritythread",
+      "request": "launch",
+      "mainClass": "prioritythread",
+      "projectName": "work_19f0686b"
+    },
+    {
+      "type": "java",
+      "name": "NonSynchronizedCounter",
+      "request": "launch",
+      "mainClass": "NonSynchronizedCounter",
+      "projectName": "work_19f0686b"
+    },
+    {
+      "type": "java",
+      "name": "TestSynchronization1",
+      "request": "launch",
+      "mainClass": "TestSynchronization1",
+      "projectName": "work_19f0686b"
+    },
+    {
+      "type": "java",
       "name": "firstcustomclass",
       "request": "launch",
       "mainClass": "firstcustomclass",
@@ -71,8 +120,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/KIIT/Desktop/work/dsa",
+      "program": "c:/Users/KIIT/Desktop/work/dsa/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
