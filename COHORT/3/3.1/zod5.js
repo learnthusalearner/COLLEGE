@@ -11,7 +11,7 @@ function validateInput(obj) {
     })
 
     const response = schema.safeParse(obj);
-    console.log(response);//response sucess is coming
+    console.log(response);//response success is coming
   //return response
 }
 app.post("/login", function (req, res) {

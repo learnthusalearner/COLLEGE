@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ans() {
+				const a = document.getElementById("num1").value;
+				const b = document.getElementById("num2").value;
+				fetch("https://sum-server.100xdevs.com/sum?a=" +a +"&b=" +b)
+			       .then(function (response) {
+					response.text().then(function (ans) {
+						document.getElementById("ans").innerHTML = ans;
+					});
+				});
+			}
+    </script>
+</head>
+<body>
+  <input class="hi" type="text" id="num1" placeholder="Fnum"></input><br></br>
+  <input class="hi" type="text" id="num2" placeholder="Snum"></input><br></br>
+  <button onclick="ans()">CALCULATE</button><br></br>
+  <div id="ans"></div>   
+</body>
+</html>

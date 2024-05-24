@@ -11,7 +11,9 @@
   "dependencies": {
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.3.3"
+    "mongoose": "^8.3.3",
+    "vite": "^5.2.11",
+    "zod": "^3.23.6"
   },
   "description": ""
 }

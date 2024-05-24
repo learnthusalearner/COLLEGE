@@ -62,9 +62,9 @@ app.get("/users", async function (req, res) {
 		const username = decoded.username;
 		// return a list of users other than this username from the database
 		let people = [];
-		const data = await User.find({ username: username });
+		const data = await User.find({ username: username });//all data from the server including the persons data
 		if (data) {
-			const allUsers = await User.find({});
+			const allUsers = await User.find({});//so basically here data[0]=perons data
 			for (let i = 0; i < allUsers.length; i++) {
 				if (allUsers[i].username != data[0].username) {
 					people.push(allUsers[i]);

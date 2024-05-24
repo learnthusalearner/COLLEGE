@@ -1,0 +1,39 @@
+<!-- FETCHING THE DATA FROM API HARD ASSIGNMENT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doc</title>
+    <script>
+        //debouncing remove extra network req
+        let timeout;
+        function debouncing(){
+            clearTimeout(timeout);
+            timeout=setTimeout(function(){
+                ans()
+            },1000);
+        }
+        function ans(){
+            a=document.getElementById("a").value;
+            b=document.getElementById("b").value;
+            c=document.getElementById("c").value;
+            fetch("https://sum-server.100xdevs.com/interest?principal=" +a +"&rate=" +b +"&time=" +c)
+            .then(function(response){
+                response.text().then(function(ans){
+                    document.getElementById("interest").innerHTML=ans;
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <input oninput="debouncing()" id="a" type="text" placeholder="PRINCIPLE"></input><br></br>
+    <input oninput="debouncing()" id="b" type="text" placeholder="RATE"></input><br></br>
+    <input oninput="debouncing()" id="c" type="text" placeholder="TIME"></input><br></br>
+
+    <button onclick="ans()">CALCULATE</button>
+    <br></br>
+    <div id="interest">INTREST:</div><br></br>
+</body>
+</html>
