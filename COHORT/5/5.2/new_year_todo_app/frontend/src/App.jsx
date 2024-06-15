@@ -13,7 +13,7 @@ function App() {
 				setTodos(json.todos);
 			});
 		}, 10000);
-	}, [todos]);//this means it will only ruun when it hits todos [todos]
+	}, [todos]);//this means it will only run when it hits todos [todos]
 	return (
 		<div>
 			<CreateTodo></CreateTodo>

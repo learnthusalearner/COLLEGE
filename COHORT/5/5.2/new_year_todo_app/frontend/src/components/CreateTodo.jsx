@@ -26,7 +26,7 @@ export function CreateTodo() {
 
 			<button
 				onClick={() => {
-					fetch("http://localhost:3000/todo", {//this	 is not the best way to fetch 
+					fetch("http://localhost:3000/todo", {//this	 is not the best way to fetch use axios
 						method: "POST",
 						body: JSON.stringify({
 							title: title,
