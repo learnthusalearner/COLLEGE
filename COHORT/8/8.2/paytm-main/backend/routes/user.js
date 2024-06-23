@@ -3,7 +3,7 @@ const zod = require("zod");
 const { User } = require('../db');
 const { JWT_Secretkey } = require('../config');
 const { authMiddleware } = require('../middleware');
-const router = express.Router();
+const Router = express.Router();
 
 const SignupSchema = zod.object({
     username: zod.string().email(),
@@ -12,7 +12,7 @@ const SignupSchema = zod.object({
     Lastname: zod.string()
 })
 
-router.post("/signup",async (req,res) =>{
+Router.post("/signup",async (req,res) =>{
     const body =req.body;
     const {Success} =SignupSchema.safeParse(body);
 
@@ -40,6 +40,11 @@ router.post("/signup",async (req,res) =>{
     })
     const userId = User._id;
 
+    await Account.create({
+        userId,
+        balance: 1 + Math.random() * 10000
+    })
+    
     const token = jwt.sign({
         userId
     },JWT_Secretkey);
@@ -54,7 +59,7 @@ const SigninSchema =zod.object({
     username: zod.string().email(),
     password: zod.string()
 })
-router.post("/signin",(req,res) =>{
+Router.post("/signin",(req,res) =>{
     const body =req.body;
     const { Success } =SigninSchema.safeParse(body);
 
@@ -87,7 +92,7 @@ const updateSchema = zod.object({
     Lastname:zod.string().optional()
 })
 
-router.put("/",authMiddleware,async (req,res) =>{
+Router.put("/",authMiddleware,async (req,res) =>{
     const body = req.body;
     const { Success } = updateSchema.safeParse(body);
 
@@ -106,7 +111,7 @@ router.put("/",authMiddleware,async (req,res) =>{
     })
 })
 
-router.get("/bulk",async (req,res) => {
+Router.get("/bulk",async (req,res) => {
     const Filter = req.query.Filter || "";
 
     const User = await User.find({
@@ -131,7 +136,4 @@ router.get("/bulk",async (req,res) => {
     })
 })
 
-
-
-
-module.exports = router;
+module.exports = Router;
