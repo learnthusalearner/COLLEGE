@@ -4,8 +4,8 @@ const { authMiddleware } = require("../middleware");
 const Router = require("./user");
 
 Router.get("/balance",authMiddleware,async (req,res) =>{
-    const account = await Account.findOne({
-        userId:req.userId
+    const Account = await Account.findOne({
+        UserId:req.UserId//why not req.body.UserId
     });
     res.json({
         balance:Account.balance
@@ -19,7 +19,7 @@ Router.post("/transfer",authMiddleware,async (req,res) =>{//auth verifies that i
 
     const { Amount,to } = req.body ;//req send to backend
 
-    const account = await Account.findOne({userId:req.userId}).session(session);//find account with user id which is send backend and start the session
+    const Account = await Account.findOne({UserId:req.UserId}).session(session);//find Account with user id which is send backend and start the session
 
     if(!Account || Account.balance<Amount){
         await session.abortTransaction();
@@ -28,7 +28,7 @@ Router.post("/transfer",authMiddleware,async (req,res) =>{//auth verifies that i
         })
     }
 
-    const toAccount = await Account.findOne({userId:to}).session(session);//to which account needs to be send money
+    const toAccount = await Account.findOne({UserId:to}).session(session);//to which Account needs to be send money
 
     if(!toAccount){
         await session.abortTransaction();
@@ -37,14 +37,17 @@ Router.post("/transfer",authMiddleware,async (req,res) =>{//auth verifies that i
         })
     }
 
-    await Account.updateOne({userId:req.userId},{$inc:{balance:-Amount}}).session(session);//adding money
-    await Account.updateOne({userId:to},{$inc:{balance:Amount}}).session(session);//substracting money
+    await Account.updateOne({UserId:req.UserId},{$inc:{balance:-Amount}}).session(session);//adding money
+    await Account.updateOne({UserId:to},{$inc:{balance:Amount}}).session(session);//substracting money
 
     await session.commitTransaction();//now completed the whole trasaction 
     res.json({
         message: "Transfer successful"
     });
 })
+
+module.exports = Router;//forgoten to export fix 1
+
 
 
 

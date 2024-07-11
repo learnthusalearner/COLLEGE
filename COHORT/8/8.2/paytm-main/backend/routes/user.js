@@ -1,20 +1,21 @@
 const express = require('express');
 const zod = require("zod");
-const { User } = require('../db');
-const { JWT_Secretkey } = require('../config');
+const { User, Account } = require('../db');
+const JWT = require("jsonwebtoken");
+const { JWT_Secretkey } = require('../config')
 const { authMiddleware } = require('../middleware');
 const Router = express.Router();
 
 const SignupSchema = zod.object({
     username: zod.string().email(),
     password: zod.string(),
-    Firstname: zod.string(),
-    Lastname: zod.string()
-})
+    firstname: zod.string(),
+    lastname: zod.string()
+  })
 
 Router.post("/signup",async (req,res) =>{
     const body =req.body;
-    const {Success} =SignupSchema.safeParse(body);
+    const { Success } =SignupSchema.safeParse(body);
 
     if(!Success){
         return res.status(411).json({
@@ -38,15 +39,15 @@ Router.post("/signup",async (req,res) =>{
         firstName: req.body.firstName,
         lastName: req.body.lastName,
     })
-    const userId = User._id;
+    const UserId = User._id;
 
     await Account.create({
-        userId,
+        UserId,
         balance: 1 + Math.random() * 10000
     })
     
     const token = jwt.sign({
-        userId
+        UserId
     },JWT_Secretkey);
 
     res.json({

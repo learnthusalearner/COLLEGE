@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose.connect('mongodb+srv://kunalsrivastava0405:dgTIyDvloks4LFmI@cluster0.yqaacpj.mongodb.net/PAYTM');
 
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({//proper indexing of usernameSchema "NAMES"
     username: {
         type: String,
         required: true,
@@ -37,7 +37,7 @@ const accountSchema = new mongoose.Schema({
         ref: 'User',
         required: true
     },
-    Balance :{
+    balance :{
         type: Number,
         required: true
     }
