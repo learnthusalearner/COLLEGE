@@ -1,25 +1,23 @@
-const { JWT_Secretkey } = require("./config");
-const JWT =require("jsonwebtoken");
+const { JWT_SECRET } = require("./config");
+const jwt = require("jsonwebtoken");
 
-const authMiddleware = (req,res,next) =>{
-    const authHeader = req.headers.authorization;//fix 3 here it will be headers instead of req.body.autharization
+const authMiddleware = (req, res, next) => {
+    const authHeader = req.headers.authorization;
 
-    if(!authHeader || !authHeader.startsWith('Bearer')){
-        return res.status(411).json({
-            msg:"Error/Invalid user"
-        })
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return res.status(403).json({});
     }
-    const Token =authHeader.split(' ')[1];
 
-    try{
-        const Decode=JWT.verify(Token,JWT_Secretkey);
-        req.UserId=Decode.UserId;
+    const token = authHeader.split(' ')[1];
 
-    }
-    catch(err){
-        return res.status(403).json({
-            msg:"are you the real user ......?"
-        });
+    try {
+        const decoded = jwt.verify(token, JWT_SECRET);
+
+        req.userId = decoded.userId;
+
+        next();
+    } catch (err) {
+        return res.status(403).json({});
     }
 };
 

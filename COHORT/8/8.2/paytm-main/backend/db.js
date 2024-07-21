@@ -1,8 +1,10 @@
-const mongoose = require("mongoose");
+// backend/db.js
+const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://kunalsrivastava0405:dgTIyDvloks4LFmI@cluster0.yqaacpj.mongodb.net/PAYTM');
 
-const userSchema = new mongoose.Schema({//proper indexing of usernameSchema "NAMES"
+// Create a Schema for Users
+const userSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
@@ -32,20 +34,19 @@ const userSchema = new mongoose.Schema({//proper indexing of usernameSchema "NAM
 });
 
 const accountSchema = new mongoose.Schema({
-    UserId :{
-        type: mongoose.Schema.Types.ObjectId,
+    userId: {
+        type: mongoose.Schema.Types.ObjectId, // Reference to User model
         ref: 'User',
         required: true
     },
-    balance :{
+    balance: {
         type: Number,
         required: true
     }
 });
 
-
-const User = mongoose.model('User', userSchema);
 const Account = mongoose.model('Account', accountSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = {
 	User,
