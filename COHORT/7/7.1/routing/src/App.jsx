@@ -8,9 +8,9 @@ function App() {
   return (
     <>
         {/* < AllRoutes /> */}
-        {/* < AllRoutesLazy /> */}
+        < AllRoutesLazy />
         {/* < PropDrilling /> */}
-        < ContestAPIs />
+        {/* < ContestAPIs /> */}
     </>
   )
 };

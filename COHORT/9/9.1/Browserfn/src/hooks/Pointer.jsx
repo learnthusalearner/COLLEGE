@@ -9,9 +9,10 @@ export default function mousePointer(){
 
     useEffect(() => {
         window.addEventListener('mousemove', handleMouse);
-        return () => {
-          window.removeEventListener('mousemove', handleMouse);
-        };
+        // return () => {
+        //   window.removeEventListener('mousemove', handleMouse);
+        // };
+       //to prevet memory leaks 
       }, []);
       return Position;
 }

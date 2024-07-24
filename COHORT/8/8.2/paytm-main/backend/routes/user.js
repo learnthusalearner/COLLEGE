@@ -14,21 +14,21 @@ const signupBody = zod.object({
 })
 
 router.post("/signup", async (req, res) => {
-    const { success } = signupBody.safeParse(req.body)
-    if (!success) {
+    const result = signupBody.safeParse(req.body);
+    if (!result.success) {
         return res.status(411).json({
-            message: "Email already taken / Incorrect inputs"
-        })
+            message: result.error.message
+        });
     }
 
     const existingUser = await User.findOne({
         username: req.body.username
-    })
+    });
 
     if (existingUser) {
         return res.status(411).json({
-            message: "Email already taken/Incorrect inputs"
-        })
+            message: "Email already taken"
+        });
     }
 
     const user = await User.create({
@@ -98,7 +98,7 @@ const updateBody = zod.object({
 
 router.put("/", authMiddleware, async (req, res) => {
     const { success } = updateBody.safeParse(req.body)
-    if (!success) {
+    if (!success) { 
         res.status(411).json({
             message: "Error while updating information"
         })
