@@ -1,7 +1,7 @@
 interface Person{//it will not be shown in final js file is only visible here because it helps in while
     name: string,//writing code i.e fix comiple time error
-    age?: number,
-    greet(phase:string): void
+    age?: number,//u may write it may not
+    greet(phase:string): void//when function return nothing we write void in ts
 }
 
 class employee implements Person{

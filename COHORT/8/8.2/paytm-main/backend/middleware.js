@@ -13,7 +13,7 @@ const authMiddleware = (req, res, next) => {
     try {
         const decoded = jwt.verify(token, JWT_SECRET);
 
-        req.userId = decoded.userId;
+        req.userId = decoded.userId;//The userId from the decoded payload is attached to the req object for later use.
 
         next();
     } catch (err) {
