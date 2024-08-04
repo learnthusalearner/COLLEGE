@@ -4,6 +4,7 @@ import { Inputbox } from "../Components/inputbox"
 import { SubHeading } from "../Components/subheading"
 import { Button } from "../Components/button"
 import { Bottomwarning } from "../Components/bottomwarning"
+import axios from "axios"
 
 const Signin = () => {
     const [username, setUsername] = useState("");
@@ -18,8 +19,12 @@ const Signin = () => {
                 <Inputbox onChange={(e) => { setUsername(e.target.value) }} placeholder="Enter your Email" label="Email" />
                 <Inputbox onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter your Passwords" label="Password" /   >
                 <div className="p-4">
-                    <Button onClick={(e) =>{
-                        
+                    <Button onClick={async(e) =>{
+                        const response=await axios.post("http://localhost:2000/api/v1/user/signin",{
+                            username:username,
+                            password:password
+                        })
+                        navigate("/dashboard")
                     }}label={"sign in"}></Button>
                 </div>
                 <Bottomwarning label={"Don't have an account?"} buttontext={"Sign up"} to={"/signup"} />

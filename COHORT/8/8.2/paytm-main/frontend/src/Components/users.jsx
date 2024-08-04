@@ -25,7 +25,10 @@ export const Users = () => {
             }}type="text" placeholder="Search users..." className="w-full px-2 py-1 border rounded border-slate-200"></input>
         </div>
         <div className="p-4">
-        {users.map(user => <User user={user} />)}
+        {/* {users.map(user => <User user={user} />)} */}
+        {users.map((user, index) => (
+          <User key={user._id} user={user} /> // Key added here
+        ))}
         </div>
     </>
 }

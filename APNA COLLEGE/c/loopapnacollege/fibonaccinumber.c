@@ -6,7 +6,7 @@ int main() {
 
     for(int i=1;i<=n;i++){
         printf("%d\t",a);
-        c=a+b;y
+        c=a+b;
         a=b;
         b=c;
     }
