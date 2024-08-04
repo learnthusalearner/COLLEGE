@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Signup from "./Pages/signup"
-import Signin from "./Pages/signin"
+import Signin from "./Pages/signin" 
 import Dashboard from "./Pages/dashboard"
-import { Send } from "./Pages/send"
+import  Send  from "./Pages/send"
 function App() {
 
   return (
@@ -18,5 +18,6 @@ function App() {
     </div>
   )
 }
+
 
 export default App

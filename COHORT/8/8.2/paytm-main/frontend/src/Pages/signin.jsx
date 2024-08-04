@@ -18,9 +18,11 @@ const Signin = () => {
                 <Inputbox onChange={(e) => { setUsername(e.target.value) }} placeholder="Enter your Email" label="Email" />
                 <Inputbox onChange={(e) => { setPassword(e.target.value) }} placeholder="Enter your Passwords" label="Password" /   >
                 <div className="p-4">
-                    <Button label={"sign in"}></Button>
+                    <Button onClick={(e) =>{
+                        
+                    }}label={"sign in"}></Button>
                 </div>
-                <Bottomwarning label={"Don't have an account?"} buttontext={"Sign up"} to={"/signin"} />
+                <Bottomwarning label={"Don't have an account?"} buttontext={"Sign up"} to={"/signup"} />
             </div>
         </div>
     </div>

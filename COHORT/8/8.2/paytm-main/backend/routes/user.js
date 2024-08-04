@@ -17,7 +17,7 @@ router.post("/signup", async (req, res) => {
     const result = signupBody.safeParse(req.body);
     if (!result.success) {
         return res.status(411).json({
-            message: result.error.message
+            msg:"Invalid input"
         });
     }
 
@@ -115,7 +115,7 @@ router.put("/", authMiddleware, async (req, res) => {
 
 router.get("/bulk", async (req, res) => {
     const filter = req.query.filter || "";
-
+//will help in finding users in frontend in dashboard page
     const users = await User.find({
         $or: [{
             firstName: {
