@@ -15,5 +15,5 @@ app.use(express.json());
 app.use("/api/v1", rootRouter);
 
 app.listen(3000, () => {
-    console.log('Server listening on port 2000');
+    console.log('Server listening on port 3000');
   });
