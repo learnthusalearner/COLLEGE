@@ -36,8 +36,8 @@ const Send = () => {
             setSuccess('Transfer successful!');
             setError(false);
         } catch (error) {
-            setError(error.response?.data?.message || 'Transfer failed.');
-            setSuccess('');
+            setError('Transfer failed.');
+            setSuccess(false);
         }
     };
 

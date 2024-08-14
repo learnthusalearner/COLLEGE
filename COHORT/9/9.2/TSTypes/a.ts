@@ -14,7 +14,7 @@ interface Manager {//interface
   const t: Techlead ={
     name:"kunal",
     // startDate:new Date(),
-    startDate:new Date().toString(),//it must have caused error if startdate is an interface
+    startDate:new Date().toString(),//it might have caused an error if startdate is an interface
     department:"xyz"
 
 }    
