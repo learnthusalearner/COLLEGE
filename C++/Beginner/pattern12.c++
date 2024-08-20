@@ -11,15 +11,15 @@ int main() {
     int n=5;
 
 int x=1;
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= n-i+1; j++) {
-            cout <<j;
+    for (int row = 1; row <= n; row++) {
+        for (int col = 1; col <= n-row+1; col++) {
+            cout <<col;
         }
-        for (int j = 1; j <=(i-1)*2; j++) {
+        for (int col = 1; col <=(row-1)*2; col++) {
             cout <<"*";
         }
-        for (int j =n-i+1; j >=1; j--) {
-            cout <<j;
+        for (int col =n-row+1; col >=1; col--) {
+            cout <<col;
         }
         
 

@@ -7,9 +7,9 @@ app.use(express.json());
 
 const ALL_USERS = [
   {
-    username: "harkirat@gmail.com",
+    username: "kunal@gmail.com",
     password: "123",
-    name: "harkirat singh",
+    name: "kunal",
   },
   {
     username: "raman@gmail.com",
@@ -28,9 +28,10 @@ function userExists(username, password) {
     for(let i=0;i<ALL_USERS.length;i++){
       if(ALL_USERS[i].username==username && ALL_USERS[i].password==password){
         userExists=true;
+        break;
       }
-      return userExists;
     }  
+    return userExists;
   }
 app.post("/signin", function (req, res) {
   const username = req.body.username;

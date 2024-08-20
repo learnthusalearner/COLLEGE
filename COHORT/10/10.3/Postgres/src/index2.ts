@@ -20,7 +20,7 @@ async function getUser(email: string) {
       console.log('No user found with the given email.');
       return null; // Return null if no user was found
     }
-  } catch (err) {
+  } catch (err) { 
     console.error('Error during fetching user:', err);
     throw err; // Rethrow or handle error appropriately
   } finally {
