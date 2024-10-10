@@ -17,7 +17,7 @@ function updateUser(updatedProps: UpdatePropsOptional) {
 }
 
 // Example usage of updateUser
-updateUser({ name: "Alice" }); // Only updating the name 
-//will only work if partial properties are used
+updateUser({ name: "Alice" }); //Only updating the name 
+                               //will only work if partial properties are used
 updateUser({ age: "30", email: "alice@example.com" }); // Updating age and email
 updateUser({}); // No updates, but still a valid call
