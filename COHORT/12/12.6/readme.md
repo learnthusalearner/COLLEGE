@@ -9,5 +9,5 @@ for connecting the workers we need a connection pool
 1. prsima.io accelarate
 2. signup
 3. get the generate api key
-4. paste it into wrangler.toml like DATABASE_URL="   "
+4. paste it into wrangler.toml like DATABASE_URL="...."
 5. follow the steps in prsima.io accelarate site that include generate

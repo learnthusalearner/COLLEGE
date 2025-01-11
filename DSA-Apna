@@ -1,0 +1,48 @@
+//find the second largest element in an array
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int Second_largest(vector<int> &arr) {
+    int first = INT_MIN, second = INT_MIN;
+
+    for (int i = 0; i < arr.size(); i++) {//10,40,20,8,6
+        if (arr[i] > first) {
+            second = first;
+            first = arr[i];
+        } else if (arr[i] > second && arr[i] != first) {
+            second = arr[i];
+        }
+    }
+
+    return (second == INT_MIN) ? -1 : second; // Return -1 if there is no second largest element
+}
+
+int removeDuplicates(int arr[], int n, int newArr[]) {
+    set<int> uniqueElements;
+    int k = 0;
+    for (int i = 0; i < n; i++) {
+        if (uniqueElements.find(arr[i]) == uniqueElements.end()) {
+            uniqueElements.insert(arr[i]);
+            newArr[k++] = arr[i];
+        }
+    }
+    return k;
+}
+
+int main() {
+    vector<int> arr = {10, 5, 20, 8, 12};
+    cout << "Second largest element: " << Second_largest(arr) << endl;
+
+    int arr2[] = {1, 1, 2, 2, 2, 3, 3};
+    int n = sizeof(arr2) / sizeof(arr2[0]);
+    int newArr[n]; // New array to store unique elements
+    int k = removeDuplicates(arr2, n, newArr);
+    cout << "The array after removing duplicate elements is: ";
+    for (int i = 0; i < k; i++) {
+        cout << newArr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
