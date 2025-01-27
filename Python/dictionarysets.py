@@ -18,5 +18,21 @@ student_B ={} #null dict
 print(Student.keys())
 
 #set
-collection={1,2,3,4}
+collection={1,2,3,4,1,1,2,2,3}
 print(type(collection))
+print(collection) #no DUPLICLES
+
+#question
+marks={}
+x=int(input("enter the marks: "))
+marks.update({"phy": x})
+y=int(input("enter the marks: "))
+marks.update({"chem": y})
+z=int(input("enter the marks: "))
+marks.update({"mat": z})
+print(marks)
+
+
+
+
+

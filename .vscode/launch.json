@@ -120,8 +120,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/KIIT/Desktop/work/dsa",
-      "program": "c:/Users/KIIT/Desktop/work/dsa/build/Debug/outDebug",
+      "cwd": "c:/Users/KIIT/Desktop/work/DSA/Array&BinaryS",
+      "program": "c:/Users/KIIT/Desktop/work/DSA/Array&BinaryS/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
