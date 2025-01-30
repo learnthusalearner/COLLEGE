@@ -23,6 +23,6 @@ int main()
 {
 	string input = "Mr John Snow";
 	replaceSpaces(input);
-
 	return 0;
 }
+// Output: Mr@20John@20Snow

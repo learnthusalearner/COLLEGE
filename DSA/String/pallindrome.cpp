@@ -18,7 +18,9 @@ bool palindrome(string &s)
 }
 int main()
 {
-    string s = "noon";
+    string s = "nooooooon";
     cout << boolalpha << palindrome(s) << endl; 
     return 0;
+    
 }
+// Output: true

@@ -8,9 +8,9 @@ string remove_all_substring(string s,string part){
     }
     return s;
 }
-
+// so here while loop checks that is the length of the string in not equal to 0 and the part which we have have to remove from the the string is smaller that the string length if yes than just earse the part from the string.
 int main(){
-    string x="daabcbaabcbc";
-    string y="abc";
-    cout<<remove_all_substring(x,y)<<endl;
+    string s="daabcbaabcbc";
+    string part="abc";
+    cout<<remove_all_substring(s,part)<<endl;
 }
