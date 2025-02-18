@@ -1,3 +1,4 @@
+// Given a rotated sorted array, find the index of the pivot element (the smallest element in the array, which is also the point where the array was rotated).
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -22,7 +23,7 @@ Therefore, returning start gives us the index where the sorted portion of the ar
 }
 
 int main(){
-    vector<int> arr={8,9,10,1,2,3};
+    vector<int> arr={8,9,10,,2,3};
     int n=sizeof(int)/sizeof(arr[0]);
 
     int x=pivot(arr,n);

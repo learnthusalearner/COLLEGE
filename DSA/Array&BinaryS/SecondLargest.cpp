@@ -11,7 +11,7 @@ int largest = arr[0], second_largest = -1;
         if (arr[i] > largest) {//if the current element is greater than the largest element then update the largest and second largest element arr[1]>arr[0]
             second_largest = largest;//second largest is updated to the largest element here second_largest=arr[0] i.e 10
             largest = arr[i];//largest is updated to the current element here largest=arr[1]
-        } else if (arr[i] > second_largest && arr[i] != largest) {//here arr[1]>arr[0] and arr[1]!=arr[1] so second_largest=arr[1] (second_largest=324)
+        } else if (second_largest < arr[i] && arr[i] != largest) {//here arr[0]<arr[1] and arr[1]!=324 so second_largest=arr[1] (second_largest=324)
             second_largest = arr[i];//second_largest is updated to the current element here the second_largest=arr[1]
         }
     }

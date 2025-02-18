@@ -18,7 +18,7 @@ int binarySearch(vector<int> &arr, int start, int end, int x) {
 int findPivot(vector<int> &arr, int start, int end) {
     while (start <= end) {
         int mid = (start + end) / 2;
-      
+        
         if(arr[mid]>=arr[0]){
             start=mid+1;
         }else{
@@ -43,6 +43,6 @@ int search(vector<int> &arr, int key) {
 int main() {
     vector<int> arr = {5, 6, 7, 8, 9, 10, 1, 2, 3};
     int key = 3;
-    cout << search(arr, key);
+    cout <<"element at index "<<search(arr, key);
     return 0;
 }

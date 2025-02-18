@@ -3,8 +3,9 @@ using namespace std;
 
 string remove_all_substring(string s,string part){
     while (s.length()!=0 && s.find(part)<s.length())
-    {//string ki length 0 to nahi ya (phir jo part ha wo str ki lenth se bada to nahi)->index ki baat ho rhe yaha
+    {//string ki length 0 to nahi ya (phir jo part ha wo str ki length se bada to nahi)->index ki baat ho rhe yaha
         s.erase(s.find(part),part.length());
+        //yaha pe s.find(part) starting index dega our part.length() kitne character remove karne ha wo dega
     }
     return s;
 }

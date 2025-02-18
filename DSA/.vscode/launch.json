@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/KIIT/Desktop/work/DSA/String",
-      "program": "c:/Users/KIIT/Desktop/work/DSA/String/build/Debug/outDebug",
+      "cwd": "c:/Users/KIIT/Desktop/work/DSA/2D-array",
+      "program": "c:/Users/KIIT/Desktop/work/DSA/2D-array/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
