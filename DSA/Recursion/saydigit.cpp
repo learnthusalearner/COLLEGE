@@ -3,8 +3,7 @@ using namespace std;
 
 int sayDigit(int n)
 {
-    if (n == 0)
-        return 0;
+    if (n == 0) return 0;
 
     int lastDigit = n % 10;
     switch (lastDigit)

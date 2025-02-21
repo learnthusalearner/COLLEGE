@@ -20,7 +20,6 @@ int binarySearch(int arr[], int low, int high, int key)
       return mid;
     }
   }
-  return -1;
 }
 
 int findIndex(int arr[], int key)
@@ -33,6 +32,7 @@ int findIndex(int arr[], int key)
     high = high * 2; // 1 2 4 8 will cover larger area faster
   }
   return binarySearch(arr, low, high, key);
+  //yaha pe agar low 0 ha next wo dekh raha agar elem 1st index se zyada ha ki nahi joki hoga he 1st itr ma tab wo high ma low ki value daldega oor high ko 2x kardega then agar hua wo elem to theek warna phir wo 2x se 4x aaage hoga oor low bhe uske just peecha hoga jaldi jaldi hoga issse 
 }
 
 int main()
