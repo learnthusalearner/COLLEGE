@@ -1,12 +1,9 @@
 import React, { ReactNode } from 'react'
-
-interface DashboardLayoutProps {
-    children: ReactNode;
-  }
-
-function DashboardLayout({children}:DashboardLayoutProps) {
+import Header from './_components/Header'
+function DashboardLayout({children}) {
   return (
     <div>
+      <Header />
         {children}
     </div>
   )
