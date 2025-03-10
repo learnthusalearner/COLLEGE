@@ -1,6 +1,5 @@
 //find the intersection of 2 arr
 
-
 #include <iostream>
 #include <vector>
 
@@ -17,7 +16,7 @@ vector<int> findIntersection(vector<int>& nums1, vector<int>& nums2) {
             j++;
         } else { 
             result.push_back(nums1[i]); 
-            i++; 
+            i++;
             j++;
         }
     }

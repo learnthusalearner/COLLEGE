@@ -13,7 +13,6 @@ int firstOccurance(int arr[],int n,int key){
         if(arr[mid]==key){
             ans=mid;
             high=mid-1;//By setting high = mid - 1, we restrict the search to the left of the current mid, effectively narrowing down the search space to find earlier occurrences of the key.
-
         }
         else if(arr[low]<key){
             low=mid+1;
