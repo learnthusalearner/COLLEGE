@@ -13,7 +13,7 @@ using namespace std;
         int i=0;
         while(i<=n2-n1){//sliding window 1st window 1 to 6 then 2 to 7 and so on
             string s=s2.substr(i,s1.size());//Extract substring of length s1.size() i.e 2 here
-            if(solve(s,s1)) return true;
+            if(solve(s,s1)) return true;  
             i++;
         }
         return 0;

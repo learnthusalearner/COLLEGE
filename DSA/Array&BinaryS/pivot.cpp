@@ -7,8 +7,8 @@ int pivot(vector<int> arr,int n){
     int start=0;
     int end=n-1;
 
-    while(start<=end){
-        int mid=(start+end)/2;
+    while(start<end){ 
+        int mid=start+(end-start)/2; 
         if(arr[mid]>=arr[0]){
             start=mid+1;
         }else{
@@ -23,10 +23,11 @@ Therefore, returning start gives us the index where the sorted portion of the ar
 }
 
 int main(){
-    vector<int> arr={8,9,10,,2,3};
-    int n=sizeof(int)/sizeof(arr[0]);
+    vector<int> arr={8,9,10,2,3,4};
+    int n=arr.size();
 
     int x=pivot(arr,n);
-    cout<<x<<endl;
+    cout<<"INDEX OF PIVOT ELEMENT:"<<x<<endl;
 
+    return 0;
 }
